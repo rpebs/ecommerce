@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TransactionController;
+use App\Models\Transaction;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +33,10 @@ Route::get('/admin/products/{code}', [ProductController::class, 'destroy'])->nam
 Route::get('/admin/addstock', [ProductController::class, 'addstock'])->name('addstock');
 Route::get('/admin/addstock/fill/{code}', [ProductController::class, 'fill'])->name('autofill');
 Route::post('/admin/addstock/add', [ProductController::class, 'add'])->name('add.action');
+
+Route::get('/admin/cashier', [TransactionController::class, 'index'])->name('cashier');
+Route::post('/admin/cashier/autocomplete', [TransactionController::class, 'autocomplete'])->name('autocomplete');
+Route::post('/admin/cashier/add', [TransactionController::class, 'add'])->name('add.transaction');
+Route::get('/admin/cashier/{code}', [TransactionController::class, 'show'])->name('show.transaction');
+
+Route::delete('/admin/cashier', [TransactionController::class, 'delete'])->name('delete.transaction');

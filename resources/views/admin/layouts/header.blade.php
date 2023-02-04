@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="/mazer/dist/assets/images/logo/favicon.png" type="image/png">
     <link rel="stylesheet" href="/mazer/dist/assets/extensions/simple-datatables/style.css">
     <link rel="stylesheet" href="/mazer/dist/assets/css/pages/simple-datatables.css">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="stylesheet" href="/mazer/dist/assets/css/shared/iconly.css">
 

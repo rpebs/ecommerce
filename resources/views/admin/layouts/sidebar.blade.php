@@ -71,6 +71,12 @@
                             <span>Tambah Stok</span>
                         </a>
                     </li>
+                    <li class="sidebar-item {{ $active == 'cashier' ? 'active' : '' }}">
+                        <a href="{{ route('cashier') }}" class='sidebar-link'>
+                            <i class="bi bi-clipboard-plus-fill"></i>
+                            <span>Kasir</span>
+                        </a>
+                    </li>
 
                     <li class="sidebar-item  has-sub">
                         <a href="#" class='sidebar-link'>
